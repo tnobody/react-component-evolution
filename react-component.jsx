@@ -1,15 +1,8 @@
-// With the introduction of ES6 classes
-// react offers a component base class
+// A real popular approach to define components
+// is the functional component pattern
 
-class CounterButton extends React.Component {
-  handleClick: function() {
-    this.setState({
-      count: this.state.count + 1
-    })
-  },
-  render() {
+const CounterButton = ({count, onIncrement}) => {
     return (
-      <button onClick={this.handleClick} value={this.state.count} />
+      <button onClick={onIncrement} value={count} />
     );
-  }
 };
