@@ -1,7 +1,7 @@
-// In the first days of react we used a factory
-// function to create component classes
+// With the introduction of ES6 classes
+// react offers a component base class
 
-var CounterButton = React.createClass({
+class CounterButton extends React.Component {
   handleClick: function() {
     this.setState({
       count: this.state.count + 1
@@ -12,4 +12,4 @@ var CounterButton = React.createClass({
       <button onClick={this.handleClick} value={this.state.count} />
     );
   }
-});
+};
